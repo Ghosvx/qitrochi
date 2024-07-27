@@ -60,7 +60,8 @@ def register_ava_command(client):
             return
 
         if command is None or command not in ['stop', 'resume', 'change']:
-            message = await event.edit('🩻 Ожидайте, скачиваем вашу аватарку... Это может занять некоторое время.')
+            message = await event.message.edit('🩻 Ожидайте, скачиваем вашу аватарку... Это может занять некоторое время.')
+            await get_self_avatar(client)
             await event.edit('🔶 Начинаю установку аватарок...')
             asyncio.create_task(update_message(event, ava_count, 0))
 
