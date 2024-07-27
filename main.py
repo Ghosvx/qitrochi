@@ -16,7 +16,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 print("  _. o _|_ ._ _   _ |_  ", Fore.MAGENTA + "o " + Style.RESET_ALL)
 print(" (_| |  |_ | (_) (_ | | ", Fore.CYAN + "| " + Style.RESET_ALL)
 print("   |                     ")
-print(Fore.CYAN + " v0.02x1", Fore.RED + "b1" + Style.RESET_ALL)
+print(Fore.CYAN + " v0.02", Fore.RED + "x1" + Style.RESET_ALL)
 print(Fore.GREEN + f"Здраствуйте, {me.first_name}!" + Style.RESET_ALL)
 
 start_time = time.time()

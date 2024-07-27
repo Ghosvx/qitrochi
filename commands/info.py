@@ -6,7 +6,7 @@ def register_info_command(client, me):
         info_text = f"""
 <b>🎀 qitrochi</b>
 <b>🪧 Префикс:</b> <code>X</code>
-<b>🌐 Версия:</b> <code>0.01</code>
+<b>🌐 Версия:</b> <code>0.02x1</code>
 
 <b>😎 Владелец:</b> @{me.username}
         """
