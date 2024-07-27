@@ -3,7 +3,7 @@ import random
 import os
 from telethon import events
 from telethon.errors import FloodWaitError
-from helpers import set_profile_photo, update_message
+from helpers import set_profile_photo, update_message, get_self_avatar
 
 def format_time(seconds):
     days, seconds = divmod(seconds, 86400)
