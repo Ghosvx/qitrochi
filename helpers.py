@@ -1,5 +1,6 @@
 import asyncio
 from telethon.tl import functions
+import os
 
 async def set_profile_photo(client, photo):
     await client(functions.photos.UploadProfilePhotoRequest(

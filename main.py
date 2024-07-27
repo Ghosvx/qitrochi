@@ -1,25 +1,24 @@
 import os
 import time
-import sys
 from telethon.sync import TelegramClient
-from config import get_config
+from telethon.errors.rpcerrorlist import ApiIdInvalidError
 from commands import register_all_commands
 from helpers import set_profile_photo, get_self_avatar, update_message
+from starter import start_client
+from colorama import Fore, Style
 
-session_name = 'selfdestruct'
-config_file = 'config.cfg'
-
-api_id, api_hash = get_config(config_file)
-
-client = TelegramClient(session_name, api_id, api_hash).start()
+client = start_client()
 
 me = client.get_me()
 
-print("  _. o _|_ ._ _   _ |_  o ")
-print(" (_| |  |_ | (_) (_ | | | ")
+os.system('cls' if os.name == 'nt' else 'clear')
+
+print("  _. o _|_ ._ _   _ |_  ", Fore.MAGENTA + "o " + Style.RESET_ALL)
+print(" (_| |  |_ | (_) (_ | | ", Fore.CYAN + "| " + Style.RESET_ALL)
 print("   |                     ")
-print(" V0.02")
-print("Здраствуйте,", me.first_name, "!")
+print(Fore.CYAN + " v0.02x1", Fore.RED + "b1" + Style.RESET_ALL)
+print(Fore.GREEN + f"Здраствуйте, {me.first_name}!" + Style.RESET_ALL)
+
 start_time = time.time()
 
 register_all_commands(client, start_time, me)
